@@ -1,5 +1,21 @@
 # U2.W4: Calculate the mode!
 
+#def mode(array)
+#	p array.mode
+#end
+#list = [1, 3, 4, 5, 6, 1]
+#p mode(list)
+#
+nums=[1, 3, 4, 5, 6, 3, 2, 1, 1]
+def mode(array)
+	a = Hash.new(0)
+	array.each {|num| a[num] += 1}
+	b=a.sort_by {|k, v| v}.reverse
+	return b[0][0]
+end
+
+p mode(nums)
+
 # Complete each step below according to the challenge directions and 
 # include it in this file. Also make sure everything that isn't code
 # is commented in the file.  

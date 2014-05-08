@@ -1,5 +1,5 @@
 # U2.W4: Pad an Array
-
+[4, 9, 784].pad(10, 'PING!!!')
 # Complete each step below according to the challenge directions and 
 # include it in this file. Also make sure everything that isn't code
 # is commented in the file.  
