@@ -1,6 +1,29 @@
-print "scott's cool!"
-
 # U2.W4: Add it up!
+def total(array)
+  i = 0
+  array.each do |x|
+    i += x
+  end
+  return i
+end
+
+integers = [1, 2, 3, 4, 5]
+p total(integers)
+p total([1, 3, 5, 6, 9])
+
+
+words = ["I", "love", "Ruby"]
+#words.join(" ")
+def sentence_maker(array)
+	array.each {|x| x.capitalize!}
+  array.join(" ") + "."
+end
+p sentence_maker(words)
+
+
+
+
+
 
 # Complete each step below according to the challenge directions and 
 # include it in this file. Also make sure everything that isn't code
