@@ -1,3 +1,5 @@
+print "scott's cool!"
+
 # U2.W4: Add it up!
 
 # Complete each step below according to the challenge directions and 
