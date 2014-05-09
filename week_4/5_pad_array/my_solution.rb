@@ -1,5 +1,27 @@
 # U2.W4: Pad an Array
-[4, 9, 784].pad(10, 'PING!!!')
+#[4, 9, 784].pad(10, 'PING!!!')
+
+def pad(len, y)
+	my_array = [1,2,3,4,5]
+	new_array = []
+	if my_array.length < len
+		new_array=my_array.push(y) until new_array.length == len
+	elsif my_array.length == len
+		new_array=my_array
+	else
+		new_array=my_array
+	end
+	return new_array
+end
+
+my_array = [1,2,3,4,5]
+p pad(3, "Lexie")
+
+#new_array = my_array << y
+
+
+
+
 # Complete each step below according to the challenge directions and 
 # include it in this file. Also make sure everything that isn't code
 # is commented in the file.  
