@@ -41,6 +41,7 @@ def north_korean_cipher(coded_message)
             "c" => "y",
             "d" => "z"}
             
+            
   input.each do |x| # What is #each doing here?
     found_match = false  # Why would this be assigned to false from the outset? What happens when it's true?
     cipher.each_key do |y| # What is #each_key doing here?

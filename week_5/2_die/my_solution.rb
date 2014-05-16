@@ -14,15 +14,34 @@
 
 class Die
   def initialize(labels)
+  	if labels == []
+  		raise ArgumentError.new("No labels found")
+  	else
+  		@labels = labels
+  	end
   end
-
+  
   def sides
+  	l = @labels.length
+  	if l == 0
+  		raise ArgumentError.new("Number of sides must be equal to or greater than 1")
+  	end
+    return l
   end
-
+  
   def roll
+  	if @labels == []
+  		raise ArgumentError.new("Error, empty array")
+  	end
+    roll = @labels
+    roll.shuffle!
+    return roll[0]
   end
-end
+ end
 
+die=Die.new(["Hey", "what", "is", "up"])
+puts die.sides
+puts die.roll
 
 
 # 4. Refactored Solution
