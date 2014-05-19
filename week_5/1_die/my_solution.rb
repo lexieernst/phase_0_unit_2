@@ -14,18 +14,31 @@
 
 class Die
   def initialize(sides)
-    # code goes here
+  	if sides < 1
+  		raise ArgumentError.new("Error")
+  	else
+    	@sides=sides
+    end
   end
   
   def sides
-    # code goes here
+  	if @sides < 1
+  		raise ArgumentError.new("Number of sides must be equal to or greater than 1")
+  	else
+    	return @sides
+    end
   end
   
   def roll
-    # code goes here
+    roll = (1..@sides).to_a
+    roll.shuffle!
+    return roll[0]
   end
 end
 
+die=Die.new(10)
+puts die.sides
+puts die.roll
 
 
 # 4. Refactored Solution
