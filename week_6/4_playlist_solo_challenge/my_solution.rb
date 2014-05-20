@@ -1,5 +1,26 @@
 # U2.W6: Create a Playlist from Driver Code
+class Song
+       attr_reader :song, :band
+       def initialize(song,band)
+               @song = song
+               @band = band
+       end
+end 
 
+class Playlist
+       attr_reader :song
+       def initialize(*song)
+               @song = [*song]
+       end
+       def add(*new_song)
+               @song.push(*new_song)
+       end
+
+       def num_of_tracks
+               @song.count
+       end
+
+end
 
 # I worked on this challenge [by myself, with: ].
 
