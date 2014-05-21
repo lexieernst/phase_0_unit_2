@@ -20,21 +20,29 @@
 #end
 
 #CreditCard(4563 9601 2200 1999)
+require 'pry'
+require 'pry-nav'
 
 def CreditCard(num)
-	num = num.to_s.split(//)
-	for x in num
-		x = x.to_i
-		if num[x]%2 != 0
-			puts num[x]*2
+	num = num.to_s.reverse.split(//)
+	array = []
+	num.each_with_index do |item, index|
+		if index%2 != 0
+			item = (item.to_i*2).to_s.split(//)
+			array << item.map { |e| e.to_i }
 		else
-			puts num[x]
+			array << item.to_i
+  	end
 	end
+	sum = array.flatten.inject(:+)
+	if sum%10 == 0
+	    return "Valid"
+	else
+	    return "Invalid"
 	end
 end
 
-puts CreditCard(4563960122001999)
-
+p CreditCard(4563960122001999)
 
 
 # 4. Refactored Solution
