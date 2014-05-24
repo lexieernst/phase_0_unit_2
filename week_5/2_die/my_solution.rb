@@ -45,9 +45,41 @@ puts die.roll
 
 
 # 4. Refactored Solution
-
-
-
+#class Die
+#  def initialize(labels)
+#  if labels==[]
+#  raise ArgumentError.new("No labels found")
+#  else
+#  @labels=labels
+#  end
+#  end
+#
+#  def sides
+#  l=@labels.length
+#  if l == 0
+#  raise ArgumentError.new("No sides found")
+#  end
+#  return l
+#  end
+#
+#  def roll
+#  if @labels==[]
+#  raise ArgumentError.new("No labels, cannot roll :(")
+#  end
+#  roll=@labels
+#  roll.shuffle!
+#  #puts roll
+#  return roll[0]
+#  end
+#end
+#
+#die1=Die.new(["J","A","K","E","W"])
+#
+#puts die1.sides
+#puts die1.roll
+#
+#
+#
 
 
 
